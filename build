@@ -4,7 +4,7 @@ rm -rf .repo & # lets remove unnecessary things, so that no storage issue can oc
 
 # Normal build steps
 . build/envsetup.sh
-lunch lineage_miatoll-userdebug
+lunch carbon_cactus-userdebug
 export SELINUX_IGNORE_NEVERALLOWS=true
 export CCACHE_DIR=/tmp/ccache
 export CCACHE_EXEC=$(which ccache)
@@ -24,8 +24,8 @@ make_metalava(){
 }
 
 make_rom(){
-	make bacon -j16
-	zip=$(up out/target/product/miatoll/*zip)
+	make carbon -j16
+	zip=$(up out/target/product/cactus/*zip)
 	echo " "
 	echo "$zip"
 }
