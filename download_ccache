@@ -5,6 +5,6 @@ url=https://cheems.mirrorbomt.workers.dev/ccache-crdroid.tar.gz
 cd /tmp # Where to download cccahe
 time aria2c $url -x16 -s50
 echo "dl done"
-time tar xf ccache-crdroid.tar.gz
+time tar xf ccache-cr-6.1.tar.gz
 echo "unzip done"
-find ccache-crdroid.tar.gz -delete
+find ccache-cr-6.1.tar.gz -delete
