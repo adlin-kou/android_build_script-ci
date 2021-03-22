@@ -25,7 +25,7 @@ make_metalava(){
 }
 
 make_rom(){
-	make bacon -j16
+	make bacon -j10
 	zip=$(up out/target/product/certus/*zip)
 	echo " "
 	echo "$zip"
