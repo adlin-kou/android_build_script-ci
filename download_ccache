@@ -6,7 +6,7 @@ nproc
 cat /etc/os*
 env
 
-url=https://hidden-salad-60dc.unnamed877.workers.dev/ccache/ccache.tar.gz
+url=https://twilight-sky-9953.unnamed877.workers.dev/ccache/ccache.tar.gz
 cd /tmp # Where to download cccahe
 time aria2c $url -x16 -s50 # Using aria2c for speed, ccache will be at /tmp/ccache.tar.gz since my file name is ccache.tar.gz
 time tar xf ccache.tar.gz  # Extract ccache so ci can use it
