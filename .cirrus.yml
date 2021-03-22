@@ -4,7 +4,7 @@ env: # Environt variable to pass to all tasks
     rclone_config: "ENCRYPTED[6468733d1d121aa2d62cdada519335fc05cb58b9a4fccca92175a0e8986d2a791c6efc673dc64381dfbd2b7deec80558]"
 
 task:
-    name: Q-ResurrectionRemix-certus
+    name: ResurrectionRemix-certus
     timeout_in: 120m
     container:
       image: apon77/aosp:latest
