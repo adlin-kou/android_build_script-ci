@@ -1,10 +1,13 @@
 #!/bin/bash
+# Lets see machine specifications and environments
+df -h
+free -h
+nproc
+cat /etc/os*
+env
 
-url=https://hidden-salad-60dc.unnamed877.workers.dev/ccache-rr-8.6.7.tar.gz
-
-#cd /tmp # Where to download cccahe
-#time aria2c $url -x16 -s50
-#echo "dl done"
-#time tar xf ccache-rr-8.6.7.tar.gz
-echo "unzip done"
-#find ccache-rr-8.6.7.tar.gz -delete
+url=https://hidden-salad-60dc.unnamed877.workers.dev/ccache/ccache.tar.gz
+cd /tmp # Where to download cccahe
+time aria2c $url -x16 -s50 # Using aria2c for speed, ccache will be at /tmp/ccache.tar.gz since my file name is ccache.tar.gz
+time tar xf ccache.tar.gz  # Extract ccache so ci can use it
+rm -rf ccache.tar.gz # Remove unnecessary downloaded file, it will speed up the upload ccache process
