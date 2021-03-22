@@ -1,13 +1,11 @@
 #!/bin/bash
-# Lets see machine specifications and environments
-df -h
-free -h
-nproc
-cat /etc/os*
-env
 
-url=https://twilight-sky-9953.unnamed877.workers.dev/ccache.tar.gz
-cd /tmp # Where to download cccahe
-time aria2c $url -x16 -s50 # Using aria2c for speed, ccache will be at /tmp/ccache.tar.gz since my file name is ccache.tar.gz
-time tar xf ccache.tar.gz  # Extract ccache so ci can use it
-rm -rf ccache.tar.gz # Remove unnecessary downloaded file, it will speed up the upload ccache process
+url=https://drive.netterz.my.id/ccache-rr-8.6.7.tar.gz
+echo "Installing some dependencies . . . . . ."
+sudo apt update && sudo apt-get --yes --force-yes install git-core gnupg wget curl flex bison build-essential zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z1-dev libgl1-mesa-dev libxml2-utils xsltproc unzip fontconfig
+#cd /tmp # Where to download cccahe
+#time aria2c $url -x16 -s50
+#echo "dl done"
+#time tar xf ccache-rr-8.6.7.tar.gz
+#echo "unzip done"
+#find ccache-rr-8.6.7.tar.gz -delete
