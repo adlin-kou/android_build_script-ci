@@ -18,8 +18,18 @@ up(){
 }
 
 make_metalava(){
-	brunch certus
+	mka api-stubs-docs
+	mka system-api-stubs-docs
+	mka test-api-stubs-docs
 }
 
-make_metalava &
+make_rom(){
+	make bacon -j16
+	zip=$(up out/target/product/certus/*zip)
+	echo " "
+	echo "$zip"
+}
+
+make_metalava
+make_rom &
 sleep 5200 && kill "$!"
