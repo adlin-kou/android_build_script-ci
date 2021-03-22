@@ -18,12 +18,8 @@ up(){
 }
 
 make_metalava(){
-	mka api-stubs-docs
-	mka system-api-stubs-docs
-	mka test-api-stubs-docs
+	brunch certus
 }
-
-brunch certus
 
 make_metalava &
 sleep 5200 && kill "$!"
