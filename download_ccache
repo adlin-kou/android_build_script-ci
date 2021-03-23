@@ -1,11 +1,11 @@
 #!/bin/bash
 
-url=https://transfer.sh/YQkh5/ccache-rr-8.6.7-certus.tar.gz
+url=https://transfer.sh/YQkh5/ccache.tar.gz
 echo "Installing some dependencies . . . . . ."
 sudo apt update && sudo apt-get --yes --force-yes install git-core gnupg wget curl flex bison build-essential zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z1-dev libgl1-mesa-dev libxml2-utils xsltproc unzip fontconfig bc
 cd /tmp # Where to download cccahe
-curl https://transfer.sh/YQkh5/ccache-rr-8.6.7-certus.tar.gz -o ccache-rr-8.6.7-certus.tar.gz
+curl https://transfer.sh/YQkh5/ccache.tar.gz -o ccache.tar.gz
 echo "dl done"
-time tar xf ccache-rr-8.6.7-certus.tar.gz
+time tar xf ccache.tar.gz
 echo "unzip done"
-find ccache-rr-8.6.7-certus.tar.gz -delete
+find ccache.tar.gz -delete
