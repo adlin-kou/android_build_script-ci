@@ -4,7 +4,7 @@ rm -rf .repo & # lets remove unnecessary things, so that no storage issue can oc
 
 # Normal build
 source build/envsetup.sh
-lunch rr_certus-userdebug
+lunch nad_riva-userdebug
 export LC_ALL=C
 export SELINUX_IGNORE_NEVERALLOWS=true
 export CCACHE_DIR=/tmp/ccache
@@ -26,7 +26,7 @@ make_metalava(){
 
 make_rom(){
 	make bacon -j8
-	zip=$(up out/target/product/certus/*zip)
+	zip=$(up out/target/product/riva/*zip)
 	echo " "
 	echo "$zip"
 }
