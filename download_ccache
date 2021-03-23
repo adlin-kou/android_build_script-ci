@@ -4,7 +4,7 @@ url=https://transfer.sh/YQkh5/ccache-rr-8.6.7-certus.tar.gz
 echo "Installing some dependencies . . . . . ."
 sudo apt update && sudo apt-get --yes --force-yes install git-core gnupg wget curl flex bison build-essential zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z1-dev libgl1-mesa-dev libxml2-utils xsltproc unzip fontconfig bc
 cd /tmp # Where to download cccahe
-time aria2c $url -x8 -s50
+time aria2c $url -x16 -s50
 echo "dl done"
 time tar xf ccache-rr-8.6.7.tar.gz
 echo "unzip done"
